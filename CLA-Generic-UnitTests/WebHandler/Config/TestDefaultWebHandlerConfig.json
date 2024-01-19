@@ -1,0 +1,6 @@
+{
+  "Handler": "SeleniumEdge",
+  "OptionalParameters": [ "--headless2" ],
+  "ResolutionX": 1980,
+  "ResolutionY": 1024
+}

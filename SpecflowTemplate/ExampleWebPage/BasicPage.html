@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Our Funky HTML Page</title>
+    <meta name="description" content="Our first page">
+    <meta name="keywords" content="html tutorial template">
+</head>
+<body>
+    <section>
+        <a href="http://www.cla.co.uk/">Visit CLA</a>
+        <br />
+        <div id="TestId"> This is test data </div>
+        <div> <p>For testing</p></div>
+        <br />
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname">
+        </form>
+        <br />
+        <div id="results">This is test text</div>
+        <br />
+        <form>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label>
+        </form>
+        <br />
+        <button type="button" onclick="updatedNameText()">Click Me!</button>
+    </section>
+    <section>
+        <br />
+        <table class="GeneratedTable">
+            <thead>
+                <tr>
+                    <th>HeaderOne</th>
+                    <th>HeaderTwo</th>
+                    <th>HeaderThree</th>
+                </tr>
+            </thead>
+            <tbody id="TableBody">
+                <tr>
+                    <td>RowOneCellOne</td>
+                    <td>RowOneCellTwo</td>
+                    <td>RowOneCellThree</td>
+                </tr>
+                <tr>
+                    <td>RowTwoCellOne</td>
+                    <td>RowTwoCellTwo</td>
+                    <td>RowTwoCellThree</td>
+                </tr>
+                <tr>
+                    <td>RowThreeCellOne</td>
+                    <td>RowThreeCellTwo</td>
+                    <td>RowThreeCellThree</td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" onclick="addNewRowToTable()">Update Table!</button>
+    </section>
+    <section>
+        <br />
+        <h1>Heading text</h1>
+        <br />
+        <form action="#">
+            <label for="lang">Language</label>
+            <select name="languages" id="lang">
+                <option value="javascript">JavaScript</option>
+                <option value="php">PHP</option>
+                <option value="java">Java</option>
+                <option value="golang">Golang</option>
+                <option value="python">Python</option>
+                <option value="c#">C#</option>
+                <option value="C++">C++</option>
+                <option value="erlang">Erlang</option>
+            </select>
+            <input type="submit" value="Submit" />
+        </form>
+    </section>
+    <section>
+        <ol>
+            <li>
+                Coffee
+                <p>Further Detail about Coffee</p>
+            </li>
+            <li>
+                Tea
+                <p>Further Detail about Tea</p>
+            </li>
+            <li>
+                Milk
+                <p>Further Detail about Milk</p>
+            </li>
+        </ol>
+    </section>
+    <script>
+        function updatedNameText() {
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            document.getElementById("results").innerHTML = fname + " " + lname;
+        }
+    </script>
+    <script>
+        function addNewRowToTable() {
+
+            let table = document.getElementById('TableBody');
+
+            // Insert a row at the end of
+            let newRow = table.insertRow(-1)
+
+            let cell1 = newRow.insertCell(0);
+            let cell2 = newRow.insertCell(1);
+            let cell3 = newRow.insertCell(2);
+
+            cell1.innerHTML = "NEW CELL1";
+            cell2.innerHTML = "NEW CELL2";
+            cell3.innerHTML = "NEW CELL3";
+        }
+    </script>
+</body>
+</html>

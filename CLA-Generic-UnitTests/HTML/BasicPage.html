@@ -1,0 +1,106 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Our Funky HTML Page</title>
+    <meta name="description" content="Our first page">
+    <meta name="keywords" content="html tutorial template">
+</head>
+<body>
+    <section>
+        <a href="http://www.cla.co.uk/" id="TestHrefId"> Visit CLA </a>
+        <div id="TestId" class="testClass"> This is test data </div>
+        <div> <p>For testing</p></div>
+        </br>
+        <form>
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname">
+        </form>
+        </br>
+        <div id="results">This is test text</div>
+        </br>
+        <form>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label>
+        </form>
+        </br>
+        <button type="button" onclick="updatedNameText()">Click Me!</button>
+    </section>
+    <section>
+        </br>
+        <table class="GeneratedTable">
+            <thead>
+                <tr>
+                    <th>Header</th>
+                    <th>Header</th>
+                    <th>Header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+                <tr>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                    <td>Cell</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section>
+        </br>
+        <h1 id="HeaderText">Heading text</h1>
+        </br>
+        <form action="#">
+            <label for="lang">Language</label>
+            <select name="languages" id="lang">
+                <option value="javascript">JavaScript</option>
+                <option value="php">PHP</option>
+                <option value="java">Java</option>
+                <option value="golang">Golang</option>
+                <option value="python">Python</option>
+                <option value="c#">C#</option>
+                <option value="C++">C++</option>
+                <option value="erlang">Erlang</option>
+            </select>
+            <input type="submit" value="Submit" />
+        </form>
+    </section>
+    <section>
+        <ol>
+            <li>
+                Coffee
+                <p>Further Detail about Coffee</p>
+            </li>
+            <li>
+                Tea
+                <p>Further Detail about Tea</p>
+            </li>
+            <li>
+                Milk
+                <p>Further Detail about Milk</p>
+            </li>
+        </ol>
+    </section>
+    <script>
+        function updatedNameText() {
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            document.getElementById("results").innerHTML = fname + " " + lname;
+        }
+    </script>
+</body>
+</html>
